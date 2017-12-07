@@ -4,17 +4,17 @@ var username = prompt('What is you\'re name?');
 console.log('name of user', username);
 
 //prompt 1
-var beers = prompt('How many beers did Gene have at the Seahawks game?');
+var beers = prompt('How many beers did I have at the Seahawks game?');
 console.log('number of beers:', beers);
 
 if (beers === '7' || beers === '8') {
-  alert('Hell, you\'re guess is better than mine!');
+  alert('Hell, your guess is better than mine!');
 } else {
   alert('Better use that magic ball for advice!');
 }
 
 //prompt 2
-var countries = prompt('What is Gene\'s favorite country?');
+var countries = prompt('What is my favorite country?');
 console.log('number of countries:', countries);
 
 if (countries.toLowerCase() === 'brazil') {
@@ -24,7 +24,7 @@ if (countries.toLowerCase() === 'brazil') {
 }
 
 //prompt 3
-var cars = prompt('How many cars has Gene had in his life?');
+var cars = prompt('How many cars have I had in his life?');
 console.log('number of cars:', cars);
 
 if (cars === '3') {
@@ -34,7 +34,7 @@ if (cars === '3') {
 }
 
 //prompt 4
-var computers = prompt('How many computers has Gene had in his life?');
+var computers = prompt('How many computers have I had in life?');
 console.log('number of computers:', computers);
 
 if (computers === '3') {
@@ -66,14 +66,13 @@ console.log('ridiculous number of siblings', gameTime);
 //prompt 7
 var number;
 var counter = 0;
-var flag;
 
-while (counter < 5) {
-  number = parseInt(prompt('How many siblings to I have?'));
+while (number !== 21) {
+  number = parseInt(prompt('How many siblings do I have?'));
 
   if (number === 21) {
     alert('You\'ve got it');
-    counter++;
+    break;
   } else if(number > 21) {
     alert('That\'s the size of a small village somewhere');
     counter++;
@@ -85,13 +84,10 @@ while (counter < 5) {
     alert('Please enter a number');
     counter++;
   }
-  if (guess < 3) {
-    guess++;
-    counter++;
-  } else if (guess === 3) {
-    flag = true;
-    guess++;
+  if (counter === 4) {
+    alert('You\'re correct');
     break;
   }
-  console.log('counter:', counter);
 }
+
+//prompt 8
