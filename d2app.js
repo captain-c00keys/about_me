@@ -3,65 +3,78 @@
 var username = prompt('What is you\'re name?');
 console.log('name of user', username);
 
+//wrapped questions in a function. Code looked great! TR
 //prompt 1
-var beers = prompt('How many beers did I have at the Seahawks game?');
-console.log('number of beers:', beers);
+function beer() {var beers = prompt('How many beers did I have at the Seahawks game?');
+  console.log('number of beers:', beers);
 
-if (beers === '7' || beers === '8') {
-  alert('Hell, your guess is better than mine!');
-} else {
-  alert('Better use that magic ball for advice!');
+  if (beers === '7' || beers === '8') {
+    alert('Hell, your guess is better than mine!');
+  } else {
+    alert('Better use that magic ball for advice!');
+  }
 }
+beer();
 
 //prompt 2
-var countries = prompt('What is my favorite country?');
-console.log('number of countries:', countries);
+function country() {var countries = prompt('What is my favorite country?');
+  console.log('number of countries:', countries);
 
-if (countries.toLowerCase() === 'brazil') {
-  alert('Oh, you\'re good!!');
-} else {
-  alert('I would love to visit there too!');
+  if (countries.toLowerCase() === 'brazil') {
+    alert('Oh, you\'re good!!');
+  } else {
+    alert('I would love to visit there too!');
+  }
 }
+country();
 
 //prompt 3
-var cars = prompt('How many cars have I had in his life?');
-console.log('number of cars:', cars);
+function car() {var cars = prompt('How many cars have I had in his life?');
+  console.log('number of cars:', cars);
 
-if (cars === '3') {
-  alert('Getting hotter');
-} else {
-  alert('And I thought you knew me better than that!');
+  if (cars === '3') {
+    alert('Getting hotter');
+  } else {
+    alert('And I thought you knew me better than that!');
+  }
 }
+car();
 
 //prompt 4
-var computers = prompt('How many computers have I had in life?');
-console.log('number of computers:', computers);
+function computer() {var computers = prompt('How many computers have I had in life?');
+  console.log('number of computers:', computers);
 
-if (computers === '3') {
-  alert('Nailed it!!');
-} else {
-  alert('It\'s like we\'re strangers');
-}
+  if (computers === '3') {
+    alert('Nailed it!!');
+  } else {
+    alert('It\'s like we\'re strangers');
+  }
 
-if (cars === '3' && computers === '3') {
-  alert('Who would have guessed I\'ve destroyed that many expensive things!');
-} else {
-  alert('I have to look into getting new friends');
+  if (cars === '3' && computers === '3') {
+    alert('Who would have guessed I\'ve destroyed that many expensive things!');
+  } else {
+    alert('I have to look into getting new friends');
+  }
 }
+computer();
 
 //prompt 5
-var whoopings = prompt(username + ', what number of times was Gene whooped as a kid?');
-console.log('number of whoopings:', whoopings);
+function whoop() {var whoopings = prompt(username + ', what number of times was Gene whooped as a kid?');
+  console.log('number of whoopings:', whoopings);
 
-if (whoopings === '7' || whoopings === 'too many') {
-  alert('You have redeemed yourself');
-} else {
-  alert('I\'m trading you out for Justin Beiber!!');
-};
+  if (whoopings === '7' || whoopings === 'too many') {
+    alert('You have redeemed yourself');
+  } else {
+    alert('I\'m trading you out for Justin Beiber!!');
+  }
+}
+whoop();
 
 //prompt 6
-var gameTime = prompt('Hi ' + username + ', now that you\'ve guessed that I\'ve had ' + beers + 'too many, ruined ' + computers + 'computers and ' + cars + 'cars, (let\'s not even talk about the ' + whoopings + 'whoopings you\'ve guessed), it\'s time for another game.');
-console.log('ridiculous number of siblings', gameTime);
+function game() {var gameTime = prompt('Hi ' + username + ', now that you\'ve guessed that I\'ve had ' + beers + ' too many, ruined ' + computers + ' computers and ' + cars + ' cars, (let\'s not even talk about the ' + whoopings + ' whoopings you\'ve guessed), it\'s time for another game.');
+  console.log('ridiculous number of siblings', gameTime);
+}
+game();
 
 //prompt 7
 var number;
@@ -85,7 +98,7 @@ while (number !== 21) {
     counter++;
   }
   if (counter === 4) {
-    alert('You\'re correct');
+    alert('Times up!');
     break;
   }
 }
